@@ -37,6 +37,7 @@ const config = {
           plugins: [
             '@babel/plugin-proposal-class-properties',
             '@loadable/babel-plugin',
+            ['babel-plugin-styled-components', {ssr: true, displayName: true}],
             // '@babel/plugin-transform-runtime',
           ],
         },

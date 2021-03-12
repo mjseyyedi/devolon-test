@@ -8,7 +8,7 @@ import {ClientRouter} from './router'
 
 const MOUNT_NODE = document.getElementById('app')
 const store = getStore()
-console.log('***************', store)
+
 window.addEventListener('load', async () =>
   loadableReady(async () => {
     await Promise.all(polyfillPackages())

@@ -3,7 +3,7 @@ import querystring from 'querystring'
 
 import APIConfig from './APIConfig'
 
-axios.defaults.withCredentials = true
+// axios.defaults.withCredentials = true
 
 const axiosConfig = {
   baseURL: APIConfig.hostname,
@@ -25,6 +25,11 @@ const request = async (url, method, params, data, headers, options) => {
       headers,
       ...options,
     })
+    .then(response => {
+      if (response.status === 200) {
+        return response.data
+      } else throw response.error
+    })
     .catch(error =>
       error.response ? error.response.data : {status: false, error},
     )
@@ -44,6 +49,5 @@ APIConfig.endpoints.forEach(endpoint => {
     )
   }
 })
-
 
 export default API

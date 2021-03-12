@@ -1,5 +1,5 @@
 export default {
-  hostname: 'https://temp.host',
+  hostname: 'https://api.thecatapi.com/v1/',
   timeout: 10000,
   validateStatus: status => status >= 200 && status < 302,
   headers: {
@@ -7,9 +7,14 @@ export default {
   },
   endpoints: [
     {
-      key: 'getVendors',
-      url: '/mobile/v2/restaurant/vendors-list',
+      key: 'getCategories',
+      url: 'categories',
       method: 'GET',
-    }
-  ]
+    },
+    {
+      key: 'getImages',
+      url: 'images/search',
+      method: 'GET',
+    },
+  ],
 }

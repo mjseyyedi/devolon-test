@@ -1,5 +1,8 @@
 const withPrefix = action => `HOME/${action}`
 
 export default {
-  SET_HOME_DATA: withPrefix('REDUCER/SET_HOME_DATA'),
+  GET_CATEGORIES: withPrefix('REDUCER/GET_CATEGORIES'),
+  SET_CATEGORIES: withPrefix('REDUCER/SET_CATEGORIES'),
+  GET_CATEGORY_IMAGES: withPrefix('REDUCER/GET_CATEGORY_IMAGES'),
+  SET_CATEGORY_IMAGES: withPrefix('REDUCER/SET_CATEGORY_IMAGES'),
 }

@@ -1,5 +1,5 @@
 {
-  "name": "boiler-plate",
+  "name": "devolon-test",
   "version": "1.0.0",
   "homepage": "/",
   "license": "MIT",
@@ -24,7 +24,6 @@
     "lodash": "^4.17.15",
     "persianjs": "^0.4.0",
     "prop-types": "^15.7.2",
-    "query-string": "^6.8.3",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-redux": "^7.2.0",
@@ -34,6 +33,7 @@
     "redux": "^4.0.4",
     "redux-saga": "^1.1.1",
     "reselect": "^4.0.0",
+    "styled-components": "^5.2.1",
     "url-search-params-polyfill": "^7.0.0"
   },
   "devDependencies": {
@@ -52,6 +52,7 @@
     "autoprefixer": "^9.6.1",
     "babel-loader": "^8.0.6",
     "babel-plugin-dynamic-import-node": "^2.3.0",
+    "babel-plugin-styled-components": "^1.12.0",
     "brotli-webpack-plugin": "^1.1.0",
     "clean-webpack-plugin": "^3.0.0",
     "compression": "^1.7.4",

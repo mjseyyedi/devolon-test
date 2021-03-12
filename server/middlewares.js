@@ -2,8 +2,8 @@ import {getBranch} from 'router/Routes'
 import {setCookie, removeCookie} from 'API'
 
 export const configAxiosInstance = (req, res, next) => {
-  setCookie(req.headers.cookie)
-  res.on('finish', () => removeCookie())
+  // setCookie(req.headers.cookie)
+  // res.on('finish', () => removeCookie())
 
   next()
 }

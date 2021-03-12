@@ -4,7 +4,7 @@ export default (content, extractor, state) => {
   const helmet = Helmet.renderStatic()
   return `
   <!DOCTYPE html>
-    <html dir="rtl" lang="fa">
+    <html dir="ltr" lang="en">
     <head>
       ${title}
       ${meta}
@@ -19,7 +19,7 @@ export default (content, extractor, state) => {
       ${helmet.script.toString()}
       ${helmet.noscript.toString()}
     </head>
-    <body>
+    <body style="margin:0">
       <div id="app">${content}</div>
       <script>
         window.__STATE__ = ${JSON.stringify(state)}
@@ -30,15 +30,11 @@ export default (content, extractor, state) => {
   `
 }
 
-
-const title = `<title>س</title>`
+const title = `<title>devolon test</title>`
 
 const meta = `
   <meta http-equiv="Content-Type" content="text/html;" charset="utf-8" />
   <meta name="theme-color" content="#ED0C6F" />
-  <!--<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
-  <meta name="keywords" content="رستوران های تهران ،رستوران های مشهد ، رستوران های اصفهان ، رستوران های تبریز ،رستوران های کرج ،رستوران های اهواز ، نان سحر، سولدوش، عروس لبنان، شیرینی کوک، قنادی ناتلی، کوکی باکس، شیرینی پوپک، تارتلت، میلاوه‌، سفارش آنلاین کیک، سفارش آنلاین شیرینی، شیرینی خانگی، شیرینی ایرانی، شیرینی عربی، کیک، شیرینی، ژله، نان، خامه، دسر، شکلات، رستوران های پردیس ،رستوران های شهریار ، رستوران های رشت ، رستوران های کاشان, رستوران , رستوران های تهران, لازانیا, تیرامیسو, دسر, شله زرد, انواع کباب, انواع ساندویچ, انواع پیتزا, سفارش اینترنتی غذای سنتی, غذای خانگی, غذای ایرانی, کباب, پیتزا, ساندویچ, رستوران, تهران, رستوران های, اینترنت, انلاین, سفارش آنلاین, سفارش غذا در ایران, ایران, غذاهای دریایی, غذا, سنتی, خانگی, ساندویچ های گرم, ساندویچ های سرد, پیتزا ایتالیایی, رستوران ایتالیایی, سفره خانه, رستوران های ایرانی, رستوران ایرانی, رستوران های فرنگی, رستوران فرنگی, خرید آنلاین, پرداخت آنلاین, شبکه رستوران ها, فست فود, فست فود, زود فود و اسنپ، اسنپ فود ، سرویس جدید اسنپ ، اسنپ غذا ، اسنپ سفارش غذا ، سفارش غذا در اسنپ ، ارسال غذا ، زودفود و اسنپ ، اسنپ فود ، اسنپفود،سفارش غذا با اسنپ" />
-  <meta name="description" content="اسنپ فود سایت سفارش آنلاین غذا از بهترین رستوران های تهران، سفارش آنلاین کیک و شیرینی، سوپرمارکت آنلاین و سفارش آنلاین از کافی شاپ است." />-->
   <meta http-equiv="Accept-CH" content="DPR,Viewport-Width,Width" />
   <meta http-equiv="Cache-Control" content="no-store" />
   <meta name="mobile-web-app-capable" content="yes" />

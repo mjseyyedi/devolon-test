@@ -3,15 +3,16 @@ import {createSelector} from 'reselect'
 const selectHome = state =>
   state.home
 
-
-const selectHomeData = () =>
+export const selectCategories = () =>
   createSelector(
     selectHome,
     home =>
-      home
-        .homeData
+      home.categories,
   )
 
-export {
-  selectHomeData,
-}
+export const selectCategoryImages = () =>
+  createSelector(
+    selectHome,
+    home =>
+      home.category_images,
+  )
