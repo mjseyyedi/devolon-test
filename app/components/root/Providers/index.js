@@ -3,7 +3,6 @@ import {useLocation} from 'react-router-dom'
 import {renderRoutes} from 'react-router-config'
 import {useSelector, useDispatch} from 'react-redux'
 
-import 'components/theme'
 import {getBranch} from 'router/Routes'
 import {setRouterMatch} from 'Redux/reducers/global/actions'
 import Context, {states} from '../Context'
@@ -20,14 +19,18 @@ const Providers = ({route}) => {
   }, [location.pathname])
 
   function setState(key, value) {
-    if(key){
-      setCStates(state => ({...state, [key] : value}))
+    if (key) {
+      setCStates(state => ({...state, [key]: value}))
     }
   }
 
-  return <Context contextStates={contextStates}>
-    {renderRoutes(route.routes, {setState : (key, value) => setState(key, value)})}
-  </Context>
+  return (
+    <Context contextStates={contextStates}>
+      {renderRoutes(route.routes, {
+        setState: (key, value) => setState(key, value),
+      })}
+    </Context>
+  )
 }
 
 export default Providers

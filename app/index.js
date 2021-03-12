@@ -6,6 +6,8 @@ import {loadableReady} from '@loadable/component'
 import getStore from 'Redux'
 import {ClientRouter} from './router'
 
+import './components/theme/base.css'
+
 const MOUNT_NODE = document.getElementById('app')
 const store = getStore()
 
